@@ -18,29 +18,37 @@ const microFont = Micro_5({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.mohdahsanrazakhan.com"),
+
   title: "Mohd Ahsan Raza Khan | Portfolio",
   description:
-    "Welcome to the portfolio of Mohd Ahsan Raza Khan - Full Stack Developer specializing in React, Next.js, and modern web technologies. Explore projects, experience, and skills.",
+    "Welcome to the portfolio of Mohd Ahsan Raza Khan - Full Stack Developer specializing in React, Next.js, and modern web technologies.",
+
   openGraph: {
     title: "Mohd Ahsan Raza Khan | Portfolio",
     description: "Explore my work, skills, and projects.",
-    url: "https://www.mohdahsanrazakhan.com",
+    url: "/",
     siteName: "Mohd Ahsan Raza Khan",
     images: [
       {
-        url: "https://www.mohdahsanrazakhan.com/og-image.png",
+        url: "/og-image.jpg?v=4",
         width: 1200,
         height: 630,
       },
     ],
-    locale: "en_US",
     type: "website",
+    locale: "en_US",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Mohd Ahsan Raza Khan | Portfolio",
+    title: "Mohd Ahsan Raza Khan",
     description: "Explore my work, skills, and projects.",
-    images: ["https://www.mohdahsanrazakhan.com/og-image.png"],
+    images: ["/og-image.jpg?v=4"],
+  },
+
+  alternates: {
+    canonical: "https://www.mohdahsanrazakhan.com",
   },
 };
 
