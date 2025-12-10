@@ -18,9 +18,30 @@ const microFont = Micro_5({
   subsets: ["latin"],
 });
 export const metadata: Metadata = {
-  title: "MARK's Portfolio",
+  title: "Mohd Ahsan Raza Khan | Portfolio",
   description:
     "Welcome to the portfolio of Mohd Ahsan Raza Khan - Full Stack Developer specializing in React, Next.js, and modern web technologies. Explore projects, experience, and skills.",
+  openGraph: {
+    title: "Mohd Ahsan Raza Khan | Portfolio",
+    description: "Explore my work, skills, and projects.",
+    url: "https://www.mohdahsanrazakhan.com",
+    siteName: "Mohd Ahsan Raza Khan",
+    images: [
+      {
+        url: "https://www.mohdahsanrazakhan.com/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mohd Ahsan Raza Khan | Portfolio",
+    description: "Explore my work, skills, and projects.",
+    images: ["https://www.mohdahsanrazakhan.com/og-image.png"],
+  },
 };
 
 export { microFont, bytesizedFont };
