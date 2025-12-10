@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 
 const bytesizedFont = localFont({
   src: "../public/fonts/Bytesized.ttf",
@@ -65,6 +66,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
