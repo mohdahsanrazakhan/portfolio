@@ -29,7 +29,7 @@ const Hero = () => {
           building cool and scalable web experiences. From crafting beautiful
           frontends to powering robust backends, I bring ideas to life with
           clean code and great design. Let&apos;s create something amazing
-          together! 🚀
+          together!
         </p>
         <div className="mt-12 flex items-center justify-center gap-4">
           <Button size="lg" className="rounded-full text-base">
