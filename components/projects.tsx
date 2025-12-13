@@ -80,19 +80,19 @@ const Projects = () => {
     {
       title: "Legal Codes",
       description: "A legal resource platform designed to make Indian laws including the IPC, CrPC etc. easily accessible to everyone.",
-      image: "/1.webp",
+      image: "/project1.webp",
       technologies: ["React.js", "JavaScript", "Tailwind CSS", "PWA"],
       liveUrl: "https://legalcodes.in",
       githubUrl: "https://github.com/mohdahsanrazakhan/LawCodes",
     },
     {
-      title: "SalesBoard CRM",
+      title: "flowdesk CRM",
       description:
-        "A user-friendly platform that helps salespeople track leads, sales, etc. while enabling managers to monitor team performance.",
-      image: "/2.webp",
-      technologies: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
+        "A modern and scalable system designed to manage leads, campaigns, and business workflows from a single, unified dashboard.",
+      image: "/project2.webp",
+      technologies: ["React.js", "Tailwind CSS", "JavaScript"],
       liveUrl: "https://salesboardcrm.netlify.app",
-      githubUrl: "https://github.com/mohdahsanrazakhan/salesboardcrm",
+      githubUrl: "https://github.com/mohdahsanrazakhan/flowdesk-crm",
     },
   ];
 

@@ -77,7 +77,7 @@ const Experience = () => {
       period: "Mar 2024 - Aug 2024",
       description:
         "Contributed to the development of responsive, high-performance websites using React.js, and WordPress. Delivered modern frontend experiences, improved website performance, and implemented scalable Headless CMS architectures.",
-      technologies: ["React", "JavaScript", "TailwindCSS", "WordPress", "Headless CMS", "REST APIs"],
+      technologies: ["React.js", "JavaScript", "TailwindCSS", "WordPress", "Headless CMS", "REST APIs"],
     },
   ];
 
