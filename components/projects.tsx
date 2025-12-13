@@ -91,7 +91,7 @@ const Projects = () => {
         "A modern and scalable system designed to manage leads, campaigns, and business workflows from a single, unified dashboard.",
       image: "/project2.webp",
       technologies: ["React.js", "Tailwind CSS", "JavaScript"],
-      liveUrl: "https://salesboardcrm.netlify.app",
+      liveUrl: "https://flowdesk-crm.vercel.app",
       githubUrl: "https://github.com/mohdahsanrazakhan/flowdesk-crm",
     },
   ];
