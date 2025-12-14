@@ -1,6 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
-import { GithubLogo, InstagramLogo, LinkedInLogo, XLogo } from "./icons";
+import { GithubLogo, HashnodeLogo, InstagramLogo, LinkedInLogo, XLogo } from "./icons";
 import { bytesizedFont } from "@/app/layout";
 
 const Footer = () => {
@@ -17,6 +17,9 @@ const Footer = () => {
           <div className="flex items-center gap-5 text-muted-foreground">
             <Link href="https://github.com/mohdahsanrazakhan" target="_blank" rel="noopener noreferrer">
               <GithubLogo className="h-5 w-5" />
+            </Link>
+            <Link href="https://www.instagram.com/mohd.ahsanrazakhan/" target="_blank" rel="noopener noreferrer">
+              <HashnodeLogo className="h-5 w-5" />
             </Link>
             <Link href="https://x.com/MdAhsanRazaKhan" target="_blank" rel="noopener noreferrer">
               <XLogo className="h-5 w-5" />

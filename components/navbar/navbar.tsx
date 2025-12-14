@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { GithubLogo } from "../icons";
+import Signal from '../../public/signal.svg'
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import Link from "next/link";
+import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -15,14 +17,21 @@ const Navbar = () => {
         <NavMenu className="hidden md:block" />
 
         <div className="flex items-center gap-2">
-          <Link href="https://github.com/mohdahsanrazakhan" target="_blank" rel="noopener noreferrer">
-            <Button
-              variant="outline"
-              className="rounded-full shadow-none"
-              size="icon"
-            >
-              <GithubLogo className="h-5! w-5!" />
-            </Button>
+          <Link href="https://signal.me/#p/md_mark.11" target="_blank" rel="noopener noreferrer" className="leading-[0]">
+            <Tooltip>
+              <TooltipTrigger>
+                <Button
+                  variant="outline"
+                  className="rounded-full shadow-none"
+                  size="icon"
+                >
+                  <Image src={Signal} alt="Signal" className="w-7 h-7 rounded-sm grayscale brightness-0" />
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Connect on Signal</p>
+              </TooltipContent>
+            </Tooltip>
           </Link>
 
           {/* Mobile Menu */}
