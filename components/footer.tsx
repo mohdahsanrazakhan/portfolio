@@ -18,7 +18,7 @@ const Footer = () => {
             <Link href="https://github.com/mohdahsanrazakhan" target="_blank" rel="noopener noreferrer">
               <GithubLogo className="h-5 w-5" />
             </Link>
-            <Link href="https://www.instagram.com/mohd.ahsanrazakhan/" target="_blank" rel="noopener noreferrer">
+            <Link href="https://mohdahsanrazakhan.hashnode.dev/" target="_blank" rel="noopener noreferrer">
               <HashnodeLogo className="h-5 w-5" />
             </Link>
             <Link href="https://x.com/MdAhsanRazaKhan" target="_blank" rel="noopener noreferrer">
