@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import Signal from '../../public/signal.svg'
+import { MailLogo } from "../icons";
 import { Logo } from "./logo";
 import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
@@ -17,22 +17,25 @@ const Navbar = () => {
         <NavMenu className="hidden md:block" />
 
         <div className="flex items-center gap-2">
-          <Link href="https://signal.me/#p/md_mark.11" target="_blank" rel="noopener noreferrer" className="leading-[0]">
+          <Link
+            href="mailto:hello@mohdahsanrazakhan.com"
+            className="leading-[0]"
+          >
             <Tooltip>
-              <TooltipTrigger>
+              <TooltipTrigger asChild>
                 <Button
                   variant="outline"
-                  className="rounded-full shadow-none"
                   size="icon"
-                >
-                  <Image src={Signal} alt="Signal" className="w-7 h-7 rounded-sm grayscale brightness-0" />
+                  className="rounded-full shadow-none h-10 w-10 transition-all duration-200 hover:bg-foreground hover:scale-105 group">
+                  <MailLogo className=" h-5 w-5 fill-current transition-all duration-200 text-foreground group-hover:text-background" />
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Connect on Signal</p>
+                <p>Connect via Email</p>
               </TooltipContent>
             </Tooltip>
           </Link>
+
 
           {/* Mobile Menu */}
           <div className="md:hidden">
