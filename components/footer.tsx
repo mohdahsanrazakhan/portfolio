@@ -22,7 +22,7 @@ const Footer = () => {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="group rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100">
+                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group cursor-pointer">
                     <img src="/gumroad.svg" alt="Gumroad" className="h-5 w-5 grayscale group-hover:grayscale-0" />
                   </Button>
                 </TooltipTrigger>
@@ -37,7 +37,7 @@ const Footer = () => {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group">
+                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group cursor-pointer">
                     <img src="/github.svg" alt="GitHub" className="h-5 w-5 grayscale group-hover:grayscale-0" />
                   </Button>
                 </TooltipTrigger>
@@ -52,7 +52,7 @@ const Footer = () => {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group">
+                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group cursor-pointer">
                     <img src="/hashnode.svg" alt="Hashnode" className="h-5 w-5 grayscale group-hover:grayscale-0" />
                   </Button>
                 </TooltipTrigger>
@@ -67,7 +67,7 @@ const Footer = () => {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group">
+                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group cursor-pointer">
                     <img src="/x.svg" alt="X" className="h-5 w-5 grayscale group-hover:grayscale-0" />
                   </Button>
                 </TooltipTrigger>
@@ -82,7 +82,7 @@ const Footer = () => {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group">
+                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group cursor-pointer">
                     <img src="/linkedin.svg" alt="Linkedin" className="h-5 w-5 rounded grayscale group-hover:grayscale-0" />
                   </Button>
                 </TooltipTrigger>
@@ -97,7 +97,7 @@ const Footer = () => {
                   <Button
                     variant="outline"
                     size="icon"
-                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group">
+                    className="rounded-lg shadow-none h-7 w-7 transition-all duration-200 hover:bg-gray-100 group cursor-pointer">
                     <img src="/instagram.svg" alt="Instagram" className="h-5 w-5 grayscale group-hover:grayscale-0" />
                   </Button>
                 </TooltipTrigger>

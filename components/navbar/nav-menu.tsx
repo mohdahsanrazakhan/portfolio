@@ -29,6 +29,11 @@ export const NavMenu = ({ className, ...props }: NavigationMenuProps) => (
           <Link href="#projects">Projects</Link>
         </NavigationMenuLink>
       </NavigationMenuItem>
+      <NavigationMenuItem>
+        <NavigationMenuLink asChild>
+          <Link href="https://imahsan.gumroad.com/">Store</Link>
+        </NavigationMenuLink>
+      </NavigationMenuItem>
     </NavigationMenuList>
   </NavigationMenu>
 );
