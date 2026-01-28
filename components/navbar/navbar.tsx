@@ -5,7 +5,6 @@ import { NavMenu } from "./nav-menu";
 import { NavigationSheet } from "./navigation-sheet";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip"
 import Link from "next/link";
-import Image from "next/image";
 
 const Navbar = () => {
   return (
@@ -26,7 +25,7 @@ const Navbar = () => {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full shadow-none h-10 w-10 transition-all duration-200 hover:bg-foreground hover:scale-105 group">
+                  className="rounded-full shadow-none h-7 w-7 transition-all duration-200 hover:bg-foreground hover:scale-105 group">
                   <MailLogo className=" h-5 w-5 fill-current transition-all duration-200 text-foreground group-hover:text-background" />
                 </Button>
               </TooltipTrigger>
