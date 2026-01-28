@@ -25,7 +25,7 @@ const Navbar = () => {
                 <Button
                   variant="outline"
                   size="icon"
-                  className="rounded-full shadow-none h-7 w-7 transition-all duration-200 hover:bg-foreground hover:scale-105 group">
+                  className="rounded-full shadow-none h-7 w-7 transition-all duration-200 hover:bg-foreground group">
                   <MailLogo className=" h-5 w-5 fill-current transition-all duration-200 text-foreground group-hover:text-background" />
                 </Button>
               </TooltipTrigger>
