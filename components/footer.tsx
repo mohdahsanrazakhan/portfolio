@@ -16,7 +16,7 @@ const Footer = () => {
           </span>
 
           <div className="flex items-center gap-2 text-muted-foreground">
-            <Link href="https://imahsan.gumroad.com/" target="_blank" rel="noopener noreferrer">
+            <Link href="https://mohdahsanrazakhan.gumroad.com/" target="_blank" rel="noopener noreferrer">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button
