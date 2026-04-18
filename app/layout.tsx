@@ -25,6 +25,19 @@ export const metadata: Metadata = {
   title: "Mohd Ahsan Raza Khan | Portfolio",
   description:
     "Welcome to the portfolio of Mohd Ahsan Raza Khan - Full Stack Developer specializing in React, Next.js, and modern web technologies.",
+  keywords: [
+    "Mohd Ahsan Raza Khan",
+    "Ahsan Raza Khan",
+    "Mohd Ahsan Raza",
+    "Mohd Ahsan",
+    "Ahsan Raza",
+    "Ahsan Khan",
+    "Ahsan developer",
+    "Mohd Ahsan developer",
+    "Ahsan Raza Khan developer",
+    "Next.js developer India",
+    "React developer India"
+  ],
 
   openGraph: {
     title: "Mohd Ahsan Raza Khan | Portfolio",
@@ -61,6 +74,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Mohd Ahsan Raza Khan",
+    alternateName: [
+      "Ahsan Raza Khan",
+      "Mohd Ahsan",
+      "Ahsan Raza",
+      "Ahsan Khan"
+    ],
+    url: "https://www.mohdahsanrazakhan.com",
+    jobTitle: "Full Stack Developer",
+    sameAs: [
+      "https://github.com/yourusername",
+      "https://linkedin.com/in/yourusername"
+    ]
+  };
+
   return (
     <html lang="en">
       <body className={`${geistSans.className} antialiased`}>
