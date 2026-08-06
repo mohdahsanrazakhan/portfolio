@@ -56,13 +56,6 @@ const BlogPostPage = async ({ params }: BlogPostPageProps) => {
   return (
     <article className="relative pt-32 pb-20 px-6">
       <div className="max-w-screen-md mx-auto">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-8"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back to blog
-        </Link>
 
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">
           {post.title}
