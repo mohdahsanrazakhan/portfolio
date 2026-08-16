@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { GithubLogo } from "./icons";
 
 interface ProjectCardProps {
@@ -11,6 +12,7 @@ interface ProjectCardProps {
   technologies: string[];
   liveUrl?: string;
   githubUrl?: string;
+  caseStudySlug?: string;
 }
 
 const ProjectCard = ({
@@ -20,6 +22,7 @@ const ProjectCard = ({
   technologies,
   liveUrl,
   githubUrl,
+  caseStudySlug,
 }: ProjectCardProps) => {
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-xl border border-accent transition-all hover:border-primary/50">
@@ -35,7 +38,16 @@ const ProjectCard = ({
 
       {/* Content */}
       <div className="flex-1 flex flex-col p-6">
-        <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        {caseStudySlug ? (
+          <Link href={`/work/${caseStudySlug}`} className="group/title w-fit">
+            <h3 className="text-xl font-semibold mb-2 inline-flex items-center gap-1 group-hover/title:text-primary/80 transition-colors">
+              {title}
+              <ArrowUpRight className="h-4 w-4 opacity-0 -translate-x-1 transition-all group-hover/title:opacity-100 group-hover/title:translate-x-0" />
+            </h3>
+          </Link>
+        ) : (
+          <h3 className="text-xl font-semibold mb-2">{title}</h3>
+        )}
         <p className="text-muted-foreground mb-4">{description}</p>
 
         {/* Technologies */}
@@ -48,9 +60,21 @@ const ProjectCard = ({
         </div>
 
         {/* Actions */}
-        <div className="flex gap-3 mt-auto">
-          {liveUrl && (
+        <div className="flex flex-wrap gap-3 mt-auto">
+          {caseStudySlug && (
             <Button variant="default" className="rounded-full" asChild>
+              <Link href={`/work/${caseStudySlug}`}>
+                Case Study
+                <ArrowUpRight className="ml-1 h-4 w-4" />
+              </Link>
+            </Button>
+          )}
+          {liveUrl && (
+            <Button
+              variant={caseStudySlug ? "outline" : "default"}
+              className="rounded-full shadow-none"
+              asChild
+            >
               <a href={liveUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-1 h-4 w-4" />
                 Live Demo
@@ -93,6 +117,7 @@ const Projects = () => {
       technologies: ["React.js", "Tailwind CSS", "JavaScript"],
       liveUrl: "https://flowdesk-crm.vercel.app",
       githubUrl: "https://github.com/mohdahsanrazakhan/flowdesk-crm",
+      caseStudySlug: "flowdesk-crm",
     },
   ];
 

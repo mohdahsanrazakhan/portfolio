@@ -109,7 +109,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="h-16 xs:h-20 sm:h-30 md:h-40 overflow-hidden">
-          <p className={`${bytesizedFont.className} text-[12em] xs:text-[17em] sm:text-[20em] md:text-[25em] text-center text-white drop-shadow-xl leading-[0.6em]`}>MARK</p>
+          <p className={`${bytesizedFont.className} text-[12em] xs:text-[17em] sm:text-[20em] md:text-[25em] text-center text-white drop-shadow-xl leading-[0.6em] select-none`}>MARK</p>
         </div>
       </div>
     </footer>
