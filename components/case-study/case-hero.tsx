@@ -28,7 +28,7 @@ const CaseHero = ({ caseStudy }: CaseHeroProps) => {
 
       <div className="relative h-64 sm:h-[28rem] w-full overflow-hidden rounded-xl bg-accent">
         <Image
-          src={caseStudy.coverImage}
+          src={caseStudy.heroImage ?? caseStudy.coverImage}
           alt={caseStudy.title}
           className="object-cover"
           fill

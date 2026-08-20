@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { useState, type MouseEvent } from "react";
 import type { CaseStudy } from "@/lib/case-studies";
 
@@ -32,6 +33,11 @@ const WorkCard = ({ caseStudy }: WorkCardProps) => {
           className="object-cover transition-transform duration-500 group-hover:scale-105"
           fill
         />
+
+        {/* Static "clickable" affordance for touch devices (tablet/phone), where there's no hover to reveal the "View Case" badge */}
+        <div className="pointer-events-none absolute top-3 right-3 z-5 flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md lg:hidden">
+          <ArrowUpRight className="h-4 w-4" />
+        </div>
 
         {/* Hover overlay - black circular glassmorphism badge that follows the cursor */}
         <div className="pointer-events-none absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10">

@@ -20,6 +20,8 @@ export interface CaseStudy {
   title: string;
   tagline: string;
   coverImage: string;
+  /** Used for the large hero image on the case study page; falls back to coverImage when omitted */
+  heroImage?: string;
 
   // Overview / meta strip
   client: string;
@@ -324,6 +326,184 @@ export const caseStudies: CaseStudy[] = [
       {
         value: "< 1 hr",
         label: "To generate bilingual EN/AR content for the full 85-product catalog",
+      },
+    ],
+
+    technologies: [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "MongoDB",
+      "Mongoose",
+      "NextAuth.js",
+      "OpenAI API",
+      "Recharts",
+      "Vercel",
+    ],
+  },
+  {
+    slug: "returnlens",
+    title: "ReturnLens",
+    tagline:
+      "Return and COD intelligence for Gulf e-commerce sellers, turning a vague monthly loss number into a ranked, costed action list.",
+    coverImage: "/returnlens.webp",
+    heroImage: "/returnlens-csh.webp",
+
+    client: "Self-Initiated Demo Project",
+    role: "Full Stack Developer",
+    timeline: "4 Weeks, Discovery to Deployment",
+    services: [
+      "Product Design",
+      "Full-Stack Development",
+      "AI Integration",
+      "Security Hardening",
+    ],
+    liveUrl: "https://returnlens.mohdahsanrazakhan.com",
+    githubUrl: "https://github.com/mohdahsanrazakhan/returnlens-analytics",
+
+    overview:
+      "ReturnLens was built to solve a problem almost every Gulf e-commerce seller can feel but can't point to: a monthly loss from returns and failed cash-on-delivery orders that shows up as a single lump sum in the accounting export, with no breakdown of why it happens or who's driving it. It's a self-initiated portfolio build, demoed through a hypothetical persona, Al Waha Retail, a Riyadh-based apparel, footwear, and electronics seller doing 800-3,000 orders a month across Noon, Amazon.ae, and Shopify, running on realistic seeded data rather than a live client's transactions. The dashboard ingests order, return, and COD data, calculates financial loss in real time, breaks it down by city, category, product, and customer, then layers AI on top to turn those patterns into a ranked, costed action list.",
+
+    challengesIntro:
+      "Al Waha had the order volume of a serious retailer but no instrument that translated a vague 'we're losing money' feeling into exactly where the money was going and what to do about it.",
+    challenges: [
+      {
+        title: "No Visibility Into Why Returns Happen",
+        description:
+          "Returns were treated as a fixed cost of doing business instead of a solvable pattern, no team member could name the top return reason without pulling raw order exports.",
+      },
+      {
+        title: "COD Rejection Tracked as One National Number",
+        description:
+          "Riyadh was quietly running an 18% COD rejection rate against a Gulf average near 12%, invisible inside a single blended metric.",
+      },
+      {
+        title: "No Link Between Order Value and COD Risk",
+        description:
+          "Orders above SAR 500 were rejected at up to 28%, nearly 3.5x the rate of small orders, meaning COD was being accepted on exactly the orders most likely to fail.",
+      },
+      {
+        title: "No Way to Identify Repeat-Offender Customers",
+        description:
+          "6% of customers were responsible for a disproportionate share of returns and COD rejections, but with no scoring system they were treated the same as every other buyer.",
+      },
+    ],
+    goals: [
+      {
+        title: "Turn Loss Into a Real-Time, Explainable Number",
+        description:
+          "Replace the single blended monthly accounting hit with a real-time calculator that splits return cost from COD loss and estimates recoverable savings.",
+      },
+      {
+        title: "Make City and Product-Level Patterns Visible",
+        description:
+          "Surface COD success by city, return reasons by category, and per-SKU return rates so the team can act on specific, named problems instead of a fixed cost of doing business.",
+      },
+      {
+        title: "Score Customer Risk, Not Just Order Volume",
+        description:
+          "Build a 0 to 100 risk score per customer from return rate, COD history, and recent behavior, so the small slice of customers driving disproportionate loss can be handled differently.",
+      },
+      {
+        title: "Treat Security as Non-Negotiable",
+        description:
+          "Build to a production security standard from day one, a direct answer to the standard Gulf client question: 'how do I know my order and customer data is safe with a solo developer?'",
+      },
+    ],
+
+    approachIntro:
+      "The build was broken into four weekly phases, moving from Gulf-market data modeling to a hardened, production-standard dashboard with AI-generated recommendations on top.",
+    approach: [
+      {
+        title: "Phase 1: Discovery & Data Modeling",
+        description:
+          "Mapped the fields that actually drive Gulf return and COD outcomes, payment method (COD, Mada, Apple Pay, Tabby, Tamara), delivery partner (Aramex, SMSA, Fetchr, J&T, DHL), return reason, days-to-return, and city-level geography across UAE and KSA, into a MongoDB schema indexed for fast filtering across 8,000+ orders.",
+      },
+      {
+        title: "Phase 2: Loss Calculation & Core Dashboard",
+        description:
+          "Built the authenticated dashboard shell in Next.js 14 (App Router) and the signature Overview screen, a real-time money-lost calculator that separates return cost from COD loss and estimates recoverable savings, backed by configurable cost assumptions rather than hardcoded constants.",
+      },
+      {
+        title: "Phase 3: Analytics & Risk Scoring",
+        description:
+          "Built the four deep-dive modules, Returns, COD, Products, and Customers, including a city-by-city COD success comparison, a return-timing breakdown, and a 0 to 100 customer risk-scoring algorithm that flags the customers driving a disproportionate share of loss.",
+      },
+      {
+        title: "Phase 4: AI Recommendations & Security Hardening",
+        description:
+          "Seeded 20 data-backed recommendations ranked by priority and projected savings, added an on-demand AI generator (OpenAI GPT-4o-mini) that drafts new recommendations from live trend data, then hardened the whole application to production security standard.",
+      },
+    ],
+
+    featuresIntro:
+      "Every feature ties back to a specific loss driver rather than being built for its own sake.",
+    features: [
+      {
+        title: "Money Lost Calculator",
+        description:
+          "Real-time total loss to returns and COD rejections, split by cause, with a projected recoverable-savings figure, turns a vague monthly accounting hit into a specific number the whole team rallies around.",
+      },
+      {
+        title: "City-Level COD Analytics",
+        description:
+          "COD success rate by city, rejection reasons, and rejection rate by order value, surfaces exactly where COD is bleeding money, the number one Gulf-specific blind spot most tools ignore.",
+      },
+      {
+        title: "Return Analytics",
+        description:
+          "Reason breakdown, category, city, and channel comparisons, and return-timing distribution, reframes returns from a cost of doing business into a fixable quality and sizing problem.",
+      },
+      {
+        title: "Product Risk Analysis",
+        description:
+          "Category heatmap plus a sortable product table with per-SKU return rate, top reason, and total loss, tells the merchandising team exactly which SKUs to fix, re-photograph, or discontinue.",
+      },
+      {
+        title: "Customer Risk Scoring",
+        description:
+          "0 to 100 score per customer from return rate, COD history, and recent behavior, with a recommended action per tier, identifies the small segment driving disproportionate loss with a clear next step.",
+      },
+      {
+        title: "AI Recommendations",
+        description:
+          "20 pre-ranked, costed actions plus on-demand generation of new ones from live data, gives a lean ops team the output of a data analyst on demand, without hiring one.",
+      },
+    ],
+
+    gallery: [
+      {
+        src: "/returnlens-g1.webp",
+        alt: "ReturnLens dashboard, real-time return and COD loss calculator",
+        wide: true,
+      },
+      {
+        src: "/returnlens-g2.webp",
+        alt: "ReturnLens dashboard, real-time return and COD loss calculator",
+      },
+      {
+        src: "/returnlens-g3.webp",
+        alt: "ReturnLens dashboard, real-time return and COD loss calculator",
+      },
+    ],
+
+    stats: [
+      {
+        value: "SAR 127,450",
+        label: "Trailing 30-day loss surfaced, split into returns and COD rejections",
+      },
+      {
+        value: "18% vs 12%",
+        label: "Riyadh COD rejection vs. Gulf average, surfaced automatically at the city level",
+      },
+      {
+        value: "28% vs 8%",
+        label: "COD rejection rate on orders above SAR 500 vs. smaller orders",
+      },
+      {
+        value: "SAR 38,000/mo",
+        label: "Estimated recoverable savings across the top three ranked recommendations",
       },
     ],
 
