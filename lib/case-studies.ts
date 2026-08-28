@@ -520,6 +520,189 @@ export const caseStudies: CaseStudy[] = [
       "Vercel",
     ],
   },
+  {
+    slug: "proppulse",
+    title: "PropPulse",
+    tagline:
+      "Agent performance and commission analytics for Dubai real estate brokerages, turning a single monthly revenue figure into a ranked view of who is closing, where leads leak, and what commission is owed.",
+    coverImage: "/proppulse.webp",
+    heroImage: "/proppulse-csh.webp",
+
+    client: "Self-Initiated Demo Project",
+    role: "Full Stack Developer",
+    timeline: "4 Weeks, Discovery to Deployment",
+    services: [
+      "Product Design",
+      "Full-Stack Development",
+      "AI Integration",
+      "Security Hardening",
+    ],
+    liveUrl: "https://proppulse.mohdahsanrazakhan.com",
+    githubUrl: "https://github.com/mohdahsanrazakhan/proppulse-dashboard",
+
+    overview:
+      "PropPulse was built to answer the questions a Dubai brokerage owner cannot get from a listings CRM or a spreadsheet: which of their agents is actually earning the revenue, which lead source is worth paying for, and how much commission is sitting uncollected. It is a self-initiated portfolio build, demoed through a hypothetical persona, Desert View Properties LLC, an 8 agent, RERA-licensed Dubai brokerage handling sales, rentals, and off-plan, running on realistic seeded data (2,400 leads, 320 completed deals, 85 in-pipeline deals across 12 months) rather than a live client's transactions. Deliberately not a CRM or listing manager, PropPulse is a focused performance-analytics layer that sits on top of an agency's existing deal flow and answers five questions every owner asks: who is closing, where are leads leaking, what is the pipeline worth, how much commission is owed, and which communities are actually paying off.",
+
+    challengesIntro:
+      "Desert View had eight people generating real revenue and no instrument to tell the owner who was carrying the business, where the leads that mattered were coming from, and where the money was stuck. Every answer meant exporting spreadsheets and cross-referencing by hand.",
+    challenges: [
+      {
+        title: "No Agent-by-Agent Performance Comparison",
+        description:
+          "Underperformance went unnoticed for months, one agent was averaging a 45-minute lead response time against an agency norm well under 15 minutes, with no dashboard surfacing the gap.",
+      },
+      {
+        title: "No Visibility Into Lead Source Value",
+        description:
+          "Portal budgets were split roughly evenly across Bayut, Property Finder, and Dubizzle despite Dubizzle converting at 8% versus Property Finder's 18%, a blind spend decision repeated every month.",
+      },
+      {
+        title: "No Pipeline Visibility Beyond Deals in Progress",
+        description:
+          "Deals could sit in documentation for 20 or more days with nobody flagging it, delaying commission that was effectively already earned.",
+      },
+      {
+        title: "Commission Tracked, Not Reconciled",
+        description:
+          "Commission lived in a spreadsheet with no check against payment status, so AED 180,000 or more sat overdue past 30 days before anyone noticed the pattern.",
+      },
+      {
+        title: "No Read on Which Communities Were Profitable",
+        description:
+          "Deals were spread across areas with no ranking of where the agency's time and marketing budget produced the best return.",
+      },
+    ],
+    goals: [
+      {
+        title: "Rank Agents on Facts, Not Guesswork",
+        description:
+          "Replace the owner's hunch with a monthly leaderboard that ranks all agents by commission earned, deals closed, and conversion rate, and makes strong performance visible enough to reward.",
+      },
+      {
+        title: "Make Portal Spend a Measured Decision",
+        description:
+          "Plot every lead source by volume, conversion rate, and total commission generated on one chart, so next month's portal budget goes where the return actually is.",
+      },
+      {
+        title: "Surface Stalled Deals and Overdue Commission",
+        description:
+          "Flag deals stuck in a stage past 14 days and break commission into paid, pending, and overdue by agent, so money that is effectively earned stops going cold or uncollected.",
+      },
+      {
+        title: "Treat Security as Non-Negotiable",
+        description:
+          "Build to a production security standard from day one, a direct answer to the standard Gulf client question: 'how do I know my agents' commission and client data is safe with a solo developer?'",
+      },
+    ],
+
+    approachIntro:
+      "The build was broken into four weekly phases, moving from Dubai-market data modeling to a hardened, production-standard dashboard with AI insights on top.",
+    approach: [
+      {
+        title: "Phase 1: Discovery & Data Modeling",
+        description:
+          "Mapped the fields that actually drive a Dubai brokerage's numbers, RERA agent IDs, lead source (Bayut, Property Finder, Dubizzle, referral, walk-in), deal stage from prospect through completed, and the UAE commission structure (2% sales, 5% rentals, 5% VAT, agent, agency, and co-broker splits), into a MongoDB schema indexed for fast filtering across thousands of leads and deals.",
+      },
+      {
+        title: "Phase 2: Core Dashboard & Agent Performance",
+        description:
+          "Built the authenticated dashboard shell in Next.js 14 (App Router), the agency-wide Overview screen (revenue trend, deal-type mix, pipeline funnel, quick alerts), and the Agent Performance module, a comparison table plus a sports-leaderboard-style ranking with gold, silver, and bronze highlights for the top three earners.",
+      },
+      {
+        title: "Phase 3: Pipeline, Leads & Commission",
+        description:
+          "Built the Deal Pipeline (Kanban board and table view across 8 stages), the Lead Source Analytics module including a quality-vs-volume scatter chart that plots every portal by conversion rate and total commission generated, and the Commission Tracker with a live client-side calculator implementing the exact RERA-standard math (gross commission, VAT, agent split, agency split, co-broker split).",
+      },
+      {
+        title: "Phase 4: Community Analysis, AI Insights & Security Hardening",
+        description:
+          "Added the Community Performance module (heatmap by deal volume and commission density, price-per-sqft trends), seeded 15 AI-style insights ranked by severity, added an on-demand generator for new insights from live data, then hardened the whole application to production security standard with bcrypt-hashed credentials, server-side session checks on every route, full Zod validation, security headers, and rate-limited auth.",
+      },
+    ],
+
+    featuresIntro:
+      "Every feature ties back to a specific question a brokerage owner keeps asking rather than being built for its own sake.",
+    features: [
+      {
+        title: "Agent Leaderboard",
+        description:
+          "Ranks all 8 agents by commission earned, deals closed, and conversion rate, with gold, silver, and bronze top-three styling, turning 'who is actually performing' from a guess into a ranked, refreshed-monthly fact.",
+      },
+      {
+        title: "Lead Source Quality Matrix",
+        description:
+          "Scatter chart plotting every portal by lead volume, conversion rate, and total commission generated, answering the single most expensive question an owner has: where should next month's portal budget go.",
+      },
+      {
+        title: "Deal Pipeline (Kanban + Table)",
+        description:
+          "Every active deal across 8 stages, with days-in-stage flagged red past 14 days, surfacing stalled deals and the commission attached to them before they go cold.",
+      },
+      {
+        title: "Commission Calculator & Tracker",
+        description:
+          "Live RERA-accurate calculator plus a paid, pending, and overdue breakdown by agent, replacing spreadsheet math with an instant, auditable number and making overdue collections visible instead of buried.",
+      },
+      {
+        title: "Community Performance Analysis",
+        description:
+          "Heatmap of deal volume and commission density by Dubai community, plus price-per-sqft trends, showing which neighborhoods are worth an agency's marketing spend and agent time.",
+      },
+      {
+        title: "AI Performance Insights",
+        description:
+          "15 ranked, plain-language findings (critical, warning, opportunity, info) plus on-demand generation of new ones, giving a solo owner the standing output of a performance analyst without hiring one.",
+      },
+    ],
+
+    gallery: [
+      {
+        src: "/proppulse-g1.webp",
+        alt: "PropPulse dashboard, agency-wide overview with revenue trend and pipeline funnel",
+        wide: true,
+      },
+      {
+        src: "/proppulse-g2.webp",
+        alt: "PropPulse dashboard, agent leaderboard ranked by commission earned",
+      },
+      {
+        src: "/proppulse-g3.webp",
+        alt: "PropPulse dashboard, lead source quality matrix and commission tracker",
+      },
+    ],
+
+    stats: [
+      {
+        value: "45 min vs 15 min",
+        label: "One agent's average lead response time vs. the agency norm, flagged automatically",
+      },
+      {
+        value: "18% vs 8%",
+        label: "Property Finder vs. Dubizzle conversion rate, surfaced next to spend and commission",
+      },
+      {
+        value: "AED 180,000+",
+        label: "Commission overdue past 30 days, surfaced as one ranked alert",
+      },
+      {
+        value: "3x",
+        label: "Conversion lift for leads contacted within 5 minutes vs. after an hour",
+      },
+    ],
+
+    technologies: [
+      "Next.js 14",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "MongoDB",
+      "Mongoose",
+      "NextAuth.js",
+      "OpenAI API",
+      "Recharts",
+      "Vercel",
+    ],
+  },
 ];
 
 export const getCaseStudyBySlug = (slug: string) =>
