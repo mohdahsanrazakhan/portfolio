@@ -96,10 +96,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta
-          name="impact-site-verification"
-          value="26823021-1d9b-4f01-a461-bc69546f8b4e"
-        />
+        <Script id="impact-stat" strategy="afterInteractive">
+          {`(function(i,m,p,a,c,t){c.ire_o=p;c[p]=c[p]||function(){(c[p].a=c[p].a||[]).push(arguments)};t=a.createElement(m);var z=a.getElementsByTagName(m)[0];t.async=1;t.src=i;z.parentNode.insertBefore(t,z)})('https://utt.impactcdn.com/P-A7706242-fc48-4f6a-9b47-616b7f7a3a561.js','script','impactStat',document,window);impactStat('transformLinks');impactStat('trackImpression');`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
