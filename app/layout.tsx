@@ -96,6 +96,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta
+          name="impact-site-verification"
+          value="26823021-1d9b-4f01-a461-bc69546f8b4e"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
